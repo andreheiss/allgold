@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Allgold Software</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/nav.css" rel="stylesheet" />
+  </head>
+  <body>
+	<header>
+		<img src="media/logo.jpg" width="300" height="195">
+	</header>
+	<nav>
+		<a href="index.html">Startseite</a>
+		Verkaufserfassung
+		<a href="inventar.html">Inventarverwaltung</a>
+		<a href="reporting.html">Berichtswesen (Reporting)</a>
+		<a href="preislisten.html">Preislisten- und Katalogerstellung</a>
+	</nav>
+	<main>
+		<div id="content">      
+			<form class="form-horizontal" action="salesREST.php" method="POST">
+				<fieldset>
+				
+				<input type="hidden" name="action" value = "POST">
+				<legend>Verkauf erfassen</legend>
+
+				<div class="form-group">
+				<label class="col-md-4 control-label" for="ProductID">Artikel</label>  
+				<div class="col-md-4">
+				<select name="ProductID">
+				<option value="1">Produkt 1</option>
+				<option value="2">Produkt 2</option>
+				<option value="3">Produkt 3</option>
+				<option value="4">Produkt 4</option>
+				<option value="5">Produkt 5</option>
+				</select> 
+				</div>
+				</div>
+				
+				<div class="form-group">
+				<label class="col-md-4 control-label" for="price">Preis</label>
+				<div class="col-md-4">
+				<input id="price" name="price" placeholder="1" class="form-control input-md" required="" type="text">
+				</div>
+				</div>
+
+				<div class="form-group">
+				<label class="col-md-4 control-label" for="quantity">Menge</label>
+				<div class="col-md-4">
+				<input id="quantity" name="quantity" placeholder="1" class="form-control input-md" required="" type="text">
+				</div>
+				</div>
+
+				<div class="form-group">
+				<label class="col-md-4 control-label" for="open">Verkauf</label>
+				<div class="col-md-4">
+				<button id="open" name="open" class="btn btn-primary">erfassen</button>
+				</div>
+				</div>
+				
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
