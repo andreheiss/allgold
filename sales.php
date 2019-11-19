@@ -6,7 +6,7 @@ class sales
 
    public function __construct()
    {
-      $this->db = new mysqli("127.0.0.1","grp115","ITTgrp115");
+      $this->db = new mysqli("127.0.0.1","root");
 
       if (mysqli_connect_errno())
       {
@@ -34,7 +34,7 @@ class sales
    	   quantity
    	   ) VALUES (
    	   '".$data['saleID']."',
-   	   '".$data['name']."',
+   	   '".$data['productID']."',
        '".$data['location']."',
    	   '".$data['quantity']."'
    	   );";

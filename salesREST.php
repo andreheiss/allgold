@@ -23,13 +23,13 @@ switch ($method)
         break;
     }
 
-    /*if(!empty($data['location']))
+    if(!empty($data['location']))
     {
         $sql = $sales->findByLocation($data['location']);
         header('Content-type: application/json; charset=utf-8');
         echo json_encode($sql);
         break;
-    }*/
+    }
 
     else
     {
