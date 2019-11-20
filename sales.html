@@ -13,12 +13,14 @@
 	</header>
 	<nav>
 		<a href="index.html">Startseite</a>
-		Verkaufserfassung
+		<b>Verkaufserfassung</b>
 		<a href="inventar.html">Inventarverwaltung</a>
 		<a href="reporting.html">Berichtswesen (Reporting)</a>
 		<a href="preislisten.html">Preislisten- und Katalogerstellung</a>
 	</nav>
 	<main>
+		<br>
+		<br>
 		<div id="content">      
 			<form class="form-horizontal" action="salesREST.php" method="POST">
 				<fieldset>
@@ -27,22 +29,27 @@
 				<legend>Verkauf erfassen</legend>
 
 				<div class="form-group">
-				<label class="col-md-4 control-label" for="ProductID">Artikel</label>  
+				<label class="col-md-4 control-label" for="productID">Artikel</label>  
 				<div class="col-md-4">
-				<select name="ProductID">
-				<option value="1">Produkt 1</option>
-				<option value="2">Produkt 2</option>
-				<option value="3">Produkt 3</option>
-				<option value="4">Produkt 4</option>
-				<option value="5">Produkt 5</option>
+				<select name="productID">
+					<?php
+						$link = mysql_connect('localhost','root');
+						$db = mysql_select_db("grp115_IKS",$link);
+						$stmt = "SELECT name FROM products WHERE productID = ".$saleID.";";
+						$result = $this->db->query($stmt);
+						while($row = mysql_fetch_object($result)) 
+						{ 		
+							   echo '<option value="'.$row->productID.'"> '.$result.'</option>';
+						}	
+					?>
 				</select> 
 				</div>
 				</div>
 				
 				<div class="form-group">
-				<label class="col-md-4 control-label" for="location">Standort</label>  
+				<label class="col-md-4 control-label" for="stationID">Standort</label>  
 				<div class="col-md-4">
-				<select name="location">
+				<select name="stationID">
 				<option value="1">Standort 1</option>
 				<option value="2">Standort 2</option>
 				<option value="3">Standort 3</option>

@@ -23,9 +23,9 @@ switch ($method)
         break;
     }
 
-    if(!empty($data['location']))
+    if(!empty($data['stationID']))
     {
-        $sql = $sales->findByLocation($data['location']);
+        $sql = $sales->findBystationID($data['stationID']);
         header('Content-type: application/json; charset=utf-8');
         echo json_encode($sql);
         break;

@@ -1,6 +1,5 @@
-function allSales()
-{
-alert("findSales");
+function allSales(){
+	alert("findSales");
 	var url = "salesREST.php";
 	var method = "action=GET";
 	url += "?"+method;
@@ -12,8 +11,6 @@ alert("findSales");
 		if(request.status == 200)
 		{
 			var saleslist = request.responseText;
-
-
                 //getTable header for data
 				var url2 = "includes/salestable.json";
 	            var request2 = new XMLHttpRequest();
@@ -27,20 +24,17 @@ alert("findSales");
 		            }
 	            };
 	            request2.send(null);
-
-			
 		}
 	};
 	request.send(null);
 }
 
-function findSales()
-{
-alert("findSales");
+function findSales(){
+	alert("findSales");
 	var url = "salesREST.php";
 	var method = "action=GET";
-	var descVal = document.getElementById("ProductID").value;
-	var descName = document.getElementById("ProductID").name;
+	var descVal = document.getElementById("saleID").value;
+	var descName = document.getElementById("saleID").name;
 	url += "?"+method+"&"+descName+"="+descVal;
 
 	var request = new XMLHttpRequest();
@@ -64,21 +58,17 @@ alert("findSales");
 		            }
 	            };
 	            request2.send(null);
-
-			
 		}
 	};
 	request.send(null);
 }
 
 
-function getSale()
-{
-    
+function getSale(){
 	var url = "salesREST.php";
 	var method = "action=GET";
-	var descVal = document.getElementById("salesID").value;
-	var descName = document.getElementById("salesID").name;
+	var descVal = document.getElementById("saleID").value;
+	var descName = document.getElementById("saleID").name;
 	url += "?"+method+"&"+descName+"="+descVal;
 
 	alert(url);
@@ -91,7 +81,6 @@ function getSale()
 		{
 			var saleslist = request.responseText;
 			
-
                 //getTable header for data
 				var url2 = "includes/salestable.json";
 	            var request2 = new XMLHttpRequest();
@@ -105,15 +94,13 @@ function getSale()
 		            }
 	            };
 	            request2.send(null);
-
 		}
 	};
 	request.send(null);
 }
 
-
-function listSales(saleslist, getSalesTable)
-{alert(saleslist+getSalesTable);
+function listSales(saleslist, getSalesTable){
+	alert(saleslist+getSalesTable);
 	var list = document.getElementById("list");
 	var sales = JSON.parse(saleslist);
 	var salestable = JSON.parse(getSalesTable);
@@ -144,17 +131,14 @@ function listSales(saleslist, getSalesTable)
     	}
     }
     tablehead.appendChild(tableRow); alert("länge des tableheaders"+ tableattr);
-
-
-
+	
     //table body
 	var tablebody = document.createElement("tbody");
-
 
 	for(var j = 0; j < sales.length; j++)
 	{
 	    var mycurrentRow = document.createElement("tr");
-
+		
 	    for(var i = 0; i<tableattr; i++)
 	    {
 	    	var json = salestable[0];
@@ -172,17 +156,12 @@ function listSales(saleslist, getSalesTable)
 	    }
         tablebody.appendChild(mycurrentRow);
     }
-	
-
-
 	table.appendChild(tablehead);
 	table.appendChild(tablebody);
 	list.appendChild(table);
 }
 
-function getSalesTable()
-{
-
+function getSalesTable(){
 	var url = "includes/salestable.json";
 	var request = new XMLHttpRequest();
 	alert(url);

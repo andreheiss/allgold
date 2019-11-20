@@ -28,14 +28,12 @@ class sales
    {
    	   //create insert string
    	   $stmt = "INSERT INTO sales ( 
-   	   saleID,
    	   productID,
-       location,
+       stationID,
    	   quantity
    	   ) VALUES (
-   	   '".$data['saleID']."',
    	   '".$data['productID']."',
-       '".$data['location']."',
+       '".$data['stationID']."',
    	   '".$data['quantity']."'
    	   );";
 
@@ -53,7 +51,7 @@ class sales
 
   // R ead 
 
-   public function getallSales()
+   public function getAllSales()
    {
       $allSales = array();
       $stmt = "SELECT * FROM sales;";
@@ -93,10 +91,10 @@ class sales
    }
 
 
-   public function findByLocation($location)
+   public function findBystationID($stationID)
    {
    	  $allSales = array();
-   	  $stmt = "SELECT * FROM sales WHERE location = '".$location."';";
+   	  $stmt = "SELECT * FROM sales WHERE stationID = '".$stationID."';";
       $result = $this->db->query($stmt);
 
         if(empty($result))
@@ -119,8 +117,8 @@ class sales
   {
     //create insert string
     $stmt = "UPDATE station SET saleID = '".$data['saleID']."',
-                                name = '".$data['name']."',
-                                   location = '".$data['location']."',
+                                productID = '".$data['productID']."',
+                                   stationID = '".$data['stationID']."',
                             quantity =  '".$data['quantity']."'
                             WHERE saleID = ".$data['saleID']." ;";
 
