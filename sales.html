@@ -27,37 +27,48 @@
 				
 				<input type="hidden" name="action" value = "POST">
 				<legend>Verkauf erfassen</legend>
+				
+				<br>
 
 				<div class="form-group">
-				<label class="col-md-4 control-label" for="productID">Artikel</label>  
+				<label class="col-md-4 control-label" for="stationID">Produkt</label>  
 				<div class="col-md-4">
 				<select name="productID">
-					<?php
-						$link = mysql_connect('localhost','root');
-						$db = mysql_select_db("grp115_IKS",$link);
-						$stmt = "SELECT name FROM products WHERE productID = ".$saleID.";";
-						$result = $this->db->query($stmt);
-						while($row = mysql_fetch_object($result)) 
-						{ 		
-							   echo '<option value="'.$row->productID.'"> '.$result.'</option>';
-						}	
-					?>
+				<option value="1">Milch</option>
+				<option value="2">Emmentaler</option>
+				<option value="3">Gauda</option>
+				<option value="4">Joghurt 100g</option>
+				<option value="5">Quark</option>
+				<option value="6">Joghurt 500g</option>
+				<option value="7">Streichkäse</option>
+				<option value="8">Bergkäse</option>
 				</select> 
 				</div>
 				</div>
 				
+				<br>
+				
 				<div class="form-group">
-				<label class="col-md-4 control-label" for="stationID">Standort</label>  
+				<label class="col-md-4 control-label" for="stationID">Station</label>  
 				<div class="col-md-4">
 				<select name="stationID">
-				<option value="1">Standort 1</option>
-				<option value="2">Standort 2</option>
-				<option value="3">Standort 3</option>
-				<option value="4">Standort 4</option>
-				<option value="5">Standort 5</option>
+				<option value="1">Kempten Firmensitz (B)</option>
+				<option value="2">Kempten Außenstelle (V)</option>
+				<option value="3">Kaufbeuren Außenstelle (V)</option>
+				<option value="4">Memmingen Außenstelle (B)</option>
+				<option value="5">Isny Außenstelle (A)</option>
+				<option value="6">Marktoberdorf Außenstelle (A)</option>
+				<option value="7">Sonthofen Außenstelle (V)</option>
+				<option value="8">Oberstdorf Außenstelle (A)</option>
+				<option value="9">Oberstaufen Außenstelle (A)</option>
+				<option value="10">Immenstadt Außenstelle (A)</option>
+				<option value="11">Füssen Außenstelle (B)</option>
+				<option value="12">Lindau Außenstelle (B)</option>
 				</select> 
 				</div>
 				</div>
+				
+				<br>
 
 				<div class="form-group">
 				<label class="col-md-4 control-label" for="quantity">Menge</label>
@@ -65,11 +76,12 @@
 				<input id="quantity" name="quantity" placeholder="1" class="form-control input-md" required="" type="text">
 				</div>
 				</div>
+				
+				<br>
 
 				<div class="form-group">
-				<label class="col-md-4 control-label" for="open">Verkauf</label>
 				<div class="col-md-4">
-				<button id="open" name="open" class="btn btn-primary">erfassen</button>
+				<button id="open" name="open" class="btn btn-primary">Verkauf erfassen</button>
 				</div>
 				</div>
 				

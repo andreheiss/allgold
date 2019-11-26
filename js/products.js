@@ -1,6 +1,6 @@
 function allProducts()
 {
-alert("findProducts");
+alert("allProducts()");
 	var url = "productsREST.php";
 	var method = "action=GET";
 	url += "?"+method;

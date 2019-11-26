@@ -93,10 +93,10 @@ class products
    }
 
 
-   /*public function findByLocation($location)
+   public function findByName($name)
    {
    	  $allProducts = array();
-   	  $stmt = "SELECT * FROM station WHERE location = '".$location."';";
+   	  $stmt = "SELECT * FROM station WHERE name = '".$name."';";
       $result = $this->db->query($stmt);
 
         if(empty($result))
@@ -106,10 +106,10 @@ class products
 
       while ($row = $result->fetch_assoc()) 
       {
-        $allproducts[] = $row;
+        $allProducts[] = $row;
       }
 
-      return $allproducts;
+      return $allProducts;
    }*/
 
 
