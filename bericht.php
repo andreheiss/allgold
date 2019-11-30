@@ -1,4 +1,17 @@
-<?php require("templates/header.php"); ?>
+<?php
+	session_start();
+	require("php/header.php");
+	
+	if(isset($_SESSION['eingeloggt']) && $_SESSION['eingeloggt'] != 1 || $_SESSION['position'] > 1)
+	{
+		echo('<main>');
+		echo('<p>Diese Seite ist nur für eingeloggte Geschäftsführer sichtbar.</p>');
+		echo('<p><a href="/index.php">Zurück zur Startseite</a></p>');
+		echo('</main>');
+		require("php/footer.php");
+		die();
+	}
+?>
 
 <nav>
 	<ul>
@@ -7,6 +20,7 @@
 		<li><a href="inventar.php">Inventarverwaltung</a></li>
 		<li><a class="active" href="bericht.php">Berichtswesen (Reporting)</a></li>
 		<li><a href="liste.php">Preislisten- und Katalogerstellung</a></li>
+		<li style="float:right"><a href="logout.php">Ausloggen</a></li>
 		<li style="float:right"><a href="login.php">Einloggen</a></li>
 	</ul>
 </nav>
@@ -43,11 +57,12 @@
 			echo('</table>');
 			echo('<br>');
 			
-			echo('<p>Befuellungen</p>');
+			echo('<p>Befüllungen</p>');
 			$db_res = mysqli_query($db_link, "SELECT * FROM `befuellung`") or die("Fehler: " . mysqli_error($db_link));
 			
 			echo('<table id = "bericht_tabellen">');
 			echo('<tr>');
+			echo('<th>BefuellungNr</th>');
 			echo('<th>PersNr</th>');
 			echo('<th>StandortNr</th>');
 			echo('<th>ArtikelNr</th>');
@@ -58,6 +73,7 @@
 			while($row = mysqli_fetch_array($db_res))
 			{
 				echo('<tr>');
+				echo('<td>' . $row['BefuellungNr'] . '</td>');
 				echo('<td>' . $row['PersNr'] . '</td>');
 				echo('<td>' . $row['StandortNr'] . '</td>');
 				echo('<td>' . $row['ArtikelNr'] . '</td>');
@@ -155,11 +171,12 @@
 			echo('</table>');
 			echo('<br>');
 			
-			echo('<p>Verkauefe</p>');
+			echo('<p>Verkäufe</p>');
 			$db_res = mysqli_query($db_link, "SELECT * FROM `verkauf`") or die("Fehler: " . mysqli_error($db_link));
 			
 			echo('<table id = "bericht_tabellen">');
 			echo('<tr>');
+			echo('<th>VerkaufNr</th>');
 			echo('<th>StandortNr</th>');
 			echo('<th>PersNr</th>');
 			echo('<th>ArtikelNr</th>');
@@ -170,6 +187,7 @@
 			while($row = mysqli_fetch_array($db_res))
 			{
 				echo('<tr>');
+				echo('<td>' . $row['VerkaufNr'] . '</td>');
 				echo('<td>' . $row['StandortNr'] . '</td>');
 				echo('<td>' . $row['PersNr'] . '</td>');
 				echo('<td>' . $row['ArtikelNr'] . '</td>');
@@ -184,4 +202,4 @@
 		
 	</fieldset>
 </main>
-<?php require("templates/footer.php"); ?>
+<?php require("php/footer.php"); ?>

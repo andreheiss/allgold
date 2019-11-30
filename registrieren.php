@@ -26,27 +26,44 @@
 
 <main>
 	<fieldset>
-	<legend>Einloggen</legend>
+	<legend>Registrieren</legend>
 	
-		<p>Bitte loggen Sie sich ein! <a href="registrieren.php">Neu registrieren...</a></p>
-		<fieldset id="fieldset_login">
+		<p>Bitte registrieren Sie sich! <a href="login.php">Einloggen...</a></p>
+		<fieldset id="fieldset_registrieren">
 			<form action="php/loginsystemREST.php" method="POST">
 			<input type="hidden" name="action" value="POST">
 			
 			<label>Benutzername:</label>
 			<input type="text" name="Benutzername"/>
 			<br>
-
+			
 			<label>Passwort:</label>
 			<input type="password" name="Passwort"/>
+			<br>
+			
+			<label>Name:</label>
+			<input type="text" name="Name"/>
+			<br>
+			
+			<label>Vorname:</label>
+			<input type="text" name="Vorname"/>
+			<br>
+			
+			<label>Position:</label>
+			<select name="Position">
+				<option value="1">Geschäftsführung</option>
+				<option value="2">Lieferant</option>
+				<option value="3">Verkäufer</option>
+			</select>
 			<br><br>
 			
-			<div id="buttons">	
-			<input type="submit" name="login" value="Login"/>
+			<div id="buttons">
+			<input type="submit" name="register" value="Registrieren"/>
 			</div>
-			
+				
 			</form>
 		</fieldset>
+		
 	</fieldset>
 </main>
 <?php require("php/footer.php"); ?>

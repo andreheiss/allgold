@@ -1,4 +1,7 @@
-<?php require("templates/header.php"); ?>
+<?php
+	session_start();
+	require("php/header.php");
+?>
 
 <nav>
 	<ul>
@@ -7,6 +10,7 @@
 		<li><a href="inventar.php">Inventarverwaltung</a></li>
 		<li><a href="bericht.php">Berichtswesen (Reporting)</a></li>
 		<li><a href="liste.php">Preislisten- und Katalogerstellung</a></li>
+		<li style="float:right"><a href="logout.php">Ausloggen</a></li>
 		<li style="float:right"><a href="login.php">Einloggen</a></li>
 	</ul>
 </nav>
@@ -16,9 +20,9 @@
 	<legend>Allgold Supply Center</legend>
 	
 		<br><br><br><br><br>
-		<p><a>Willkommen im Allgold Supply Center.</a></p>
+		<p>Willkommen im Allgold Supply Center.</p>
 		<br><br><br><br><br>
 		
 	</fieldset>
 </main>
-<?php require("templates/footer.php"); ?>
+<?php require("php/footer.php"); ?>
