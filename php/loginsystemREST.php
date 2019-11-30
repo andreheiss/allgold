@@ -1,8 +1,7 @@
 <?php
- 
-include('loginsystem.php');
 
-$loginsystem = new loginsystem();
+include('loginSystem.php');
+
 $data = array_merge($_GET, $_POST);
 $method = $data['action'];
 $home = '<br><br><a href="/index.php">Zurück zur Startseite</a>';
@@ -24,7 +23,7 @@ switch ($method)
 			}
 			else
 			{
-				$sql = $loginsystem->register($data);
+				$sql = register($data);
 				echo "".$sql.$home;
 			}
 		}
@@ -39,7 +38,7 @@ switch ($method)
 			}
 			else
 			{
-				$sql = $loginsystem->login($data);
+				$sql = login($data);
 				echo "".$sql.$home;
 			}
 		}

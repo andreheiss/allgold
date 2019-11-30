@@ -1,16 +1,18 @@
 <?php
-	session_start();
-	require("php/header.php");
+
+require("php/loginSystem.php");
+require("php/header.php");
 	
-	if(isset($_SESSION['eingeloggt']) && $_SESSION['eingeloggt'] == 1)
-	{
-		echo('<main>');
-		echo('<p>Du bist bereits eingeloggt.</p>');
-		echo('<p><a href="/index.php">Zurück zur Startseite</a></p>');
-		echo('</main>');
-		require("php/footer.php");
-		die();
-	}
+if(istEingeloggt())
+{
+	echo('<main>');
+	echo('<p>Du bist bereits eingeloggt.</p>');
+	echo('<p><a href="/index.php">Zurück zur Startseite</a></p>');
+	echo('</main>');
+	require("php/footer.php");
+	die();
+}
+
 ?>
 
 <nav>

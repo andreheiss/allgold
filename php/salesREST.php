@@ -1,8 +1,7 @@
 <?php
- 
+
 include('sales.php');
 
-$sales = new sales();
 $data = array_merge($_GET, $_POST);
 $method = $data['action'];
 $home = '<br><br><a href="/index.php">Zurück zur Startseite</a>';
@@ -13,7 +12,7 @@ switch ($method)
 	break;
 
 	case 'POST':
-		$sql = $sales->addSale($data);
+		$sql = addSale($data);
 		echo "".$sql.$home;
 	break;
 

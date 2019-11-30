@@ -1,16 +1,29 @@
 <?php
-	session_start();
-	require("php/header.php");
-	
-	if(isset($_SESSION['eingeloggt']) && $_SESSION['eingeloggt'] != 1 || $_SESSION['position'] == 2)
-	{
-		echo('<main>');
-		echo('<p>Diese Seite ist nur für eingeloggte Mitarbeiter sichtbar.</p>');
-		echo('<p><a href="/index.php">Zurück zur Startseite</a></p>');
-		echo('</main>');
-		require("php/footer.php");
-		die();
-	}
+
+require("php/loginSystem.php");
+require("php/header.php");
+
+if(!istEingeloggt())
+{
+	echo('<main>');
+	echo('<p>Du musst dich zuvor einloggen.</p>');
+	echo('<p><a href="/login.php">Zum Login</a></p>');
+	echo('<p><a href="/index.php">Zur Startseite</a></p>');
+	echo('</main>');
+	require("php/footer.php");
+	die();
+}
+
+if(istEingeloggt() && ($_SESSION['position'] == 2))
+{
+	echo('<main>');
+	echo('<p>Zugang untersagt. Nur für Verkäufer und Geschäftsführer.</p>');
+	echo('<p><a href="/index.php">Zur Startseite</a></p>');
+	echo('</main>');
+	require("php/footer.php");
+	die();
+}
+
 ?>
 
 <nav>
