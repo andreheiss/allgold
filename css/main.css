@@ -1,99 +1,128 @@
 body
 {
-	text-align: center;
+	background-color: #333;
+	font-family: Tahoma;
+}
+
+#wrapper
+{
+	width: 90%;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
 	background-color: white;
-	font-family: Verdana, Arial;
+	border-radius: 15px;
+	overflow: hidden;
+	border: 2px solid black;
 }
 
-/* DIV-Box mit den Inhalten */
-#main
+img
 {
-	margin: 0px auto;
-	text-align: left;
-	 border: 2px solid #B8DB7D; 
-	 width: 811px; 
-	/* max-width: 100em;*/
-	background-color: white;
+	width: 100%;
+	height: auto;
 }
 
-#trailer
+nav
 {
-	border: 0px solid green;
-	height: 150px;
+	margin-top: -3px;
+}
+
+nav ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+nav li
+{
+	float: left;
+}
+
+nav a
+{
+	display: block;
+	color: white;
 	text-align: center;
-	padding: 5px;
-}
-
-/* Box für das obere Menü */
-#menuetop
-{
-	border: 0px solid #036; 
-	background-color: #B8DB7D;
-	height: 31px;
-}
-
-/* Der Seitentitel nochmal unterhalb des Menüs */
-#titel
-{
-	border: 0px solid blue;
-	padding-top: 5px;
-	height: 20px; 
-	text-align: center;
-	font-weight: bold;
-}
-
-/* Box für den eigentlichen Content */
-#content
-{
- 	border: 0px solid black;  
-	margin-left: 15px; 
-	margin-right: 15px;
-}
-
-/* Das untere Menü */
-#menuefooter
-{
-	clear: both;
-	border: 0px solid green; 
-	height: 34px;
-	text-color: #96988B;
-	text-align: center;
-	line-height: 30px;
-	margin-top: 10px;
-	background-color: #B8DB7D;
-	font-size : 12px;
-	font-family : Verdana;
-	font-weight : bold;
-	font-style : normal;
-	color : #00000;
-}
-
-#menufooter a
-{
+	padding: 14px 16px;
 	text-decoration: none;
-	color: #000000;
 }
 
-#menufooter a:hover
+nav li a:hover:not(.active)
 {
-	text-decoration: underline;
-	color: #000000;
+	background-color: #111;
 }
 
-/* Der Platzhalter unter dem unteren Menü */
-#bottom
-{
-	border: 0px solid grey; 
-	height: 20px;
-}
-	
-/* Formatierungen für die Inhaltselemente */
-.bodytext
-{
-	font-size: 11pt;
+.active {
+	background-color: #4CAF50;
 }
 
-p.bodytext
+main
 {
-	background-color: #FFFFFF; padding: 2px 4px 2px 4px; border: 1px solid #D8DB7D;
+	background-color: white;
+	text-align: center;
+}
+
+footer
+{
+	border-top: 1px solid black;
+	text-align: center;
+}
+
+fieldset
+{
+	margin: 1%;
+}
+
+#inventar_tabelle {
+	border-collapse: collapse;
+	margin: 1%;
+	width: 98%;
+}
+
+#inventar_tabelle td, #inventar_tabelle th 
+{
+	border-bottom: 1px solid #ddd;
+	padding: 0.25%;
+}
+
+#inventar_tabelle tr:hover
+{
+	background-color: #f5f5f5;
+}
+
+#inventar_tabelle th {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+
+#bericht_tabellen {
+	border-collapse: collapse;
+	margin: 1%;
+	width: 98%;
+}
+
+#bericht_tabellen td, #bericht_tabellen th 
+{
+	border-bottom: 1px solid #ddd;
+	padding: 0.25%;
+}
+
+#bericht_tabellen tr:hover
+{
+	background-color: #f5f5f5;
+}
+
+#bericht_tabellen th {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
 }
