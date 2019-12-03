@@ -9,7 +9,7 @@ CREATE TABLE `verkauf`(
 	`PersNr` int(11) NOT NULL,
 	`ArtikelNr` int(11) NOT NULL,
 	`Anzahl` int(11) NOT NULL,
-	`Datum` date NOT NULL
+	`Zeitpunkt` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

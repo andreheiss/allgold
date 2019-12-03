@@ -34,7 +34,6 @@ if(istEingeloggt() && ($_SESSION['position'] != 1))
 		<li><a class="active" href="bericht.php">Berichtswesen (Reporting)</a></li>
 		<li><a href="liste.php">Preislisten- und Katalogerstellung</a></li>
 		<li style="float:right"><a href="logout.php">Ausloggen</a></li>
-		<li style="float:right"><a href="login.php">Einloggen</a></li>
 	</ul>
 </nav>
 

@@ -1,7 +1,7 @@
 <?php
 
 require("php/loginSystem.php");
-require("php/header.php");
+include("php/header.php");
 
 if(!istEingeloggt())
 {
@@ -33,8 +33,7 @@ if(istEingeloggt() && ($_SESSION['position'] == 2))
 		<li><a href="inventar.php">Inventarverwaltung</a></li>
 		<li><a href="bericht.php">Berichtswesen (Reporting)</a></li>
 		<li><a href="liste.php">Preislisten- und Katalogerstellung</a></li>
-		<li style="float:right"><a href="logout.php">Ausloggen</a></li>
-		<li style="float:right"><a href="login.php">Einloggen</a></li>
+		<li style="float:right"><a href="logout.php">Ausloggen</a></li>');
 	</ul>
 </nav>
 
@@ -85,19 +84,25 @@ if(istEingeloggt() && ($_SESSION['position'] == 2))
 			<br>
 			
 			<label>Anzahl:</label>
-			<input type="text" name="Anzahl" placeholder="0"/>
+			<input type="number" id="Anzahl" name="Anzahl" placeholder="0"/>
 			<br>
 			
-			<label>Datum:</label>
-			<input type="text" name="Datum" placeholder="2000-01-20"/>
+			<label>Preis:</label>
+			<input type="text" id="Preis" name="Preis">
 			<br><br>
 			
-			<div id="buttons">
-			<input type="submit" name="sale" value="Verkauf erfassen"/>
-			</div>
+			<button type="button" name="Gesamtpreis" id="salebuttons">Gesamtpreis</button>
+			
+			<output style="float:right"></output>
+			<script type="text/javascript" src="js/gesamtpreis.js"></script>
+			<br><br>
+			
+			<button type="submit" name="sale" id="salebuttons">Verkauf erfassen</button>
+			<br>
 			
 			</form>
 		</fieldset>
 	</fieldset>
 </main>
+
 <?php require("php/footer.php"); ?>

@@ -2,6 +2,7 @@ body
 {
 	background-color: #333;
 	font-family: Tahoma;
+	font-size: 1em;
 }
 
 #wrapper
@@ -47,7 +48,7 @@ nav a
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 14px 16px;
+	padding: 1em 2em;
 	text-decoration: none;
 }
 
@@ -167,7 +168,7 @@ label
 	display: inline-block;
 }
 
-#buttons
+#salebuttons
 {
 	text-align: center;
 }
