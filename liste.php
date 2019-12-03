@@ -43,7 +43,7 @@ if(istEingeloggt() && ($_SESSION['position'] != 1))
 	<legend>Allgold Supply Center</legend>
 	
 		<br><br><br><br><br>
-		<p><a>Willkommen im Allgold Supply Center.</a></p>
+		<p><a>Preislisten- und Katalogerstellung</a></p>
 		<br><br><br><br><br>
 		
 	</fieldset>
