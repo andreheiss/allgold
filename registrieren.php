@@ -35,27 +35,35 @@ if(istEingeloggt())
 			<form action="php/loginsystemREST.php" method="POST">
 			<input type="hidden" name="action" value="POST">
 			
-			<label>Benutzername:</label>
+			<label>Benutzername</label>
 			<input type="text" name="Benutzername"/>
 			<br>
 			
-			<label>Passwort:</label>
+			<label>Passwort</label>
 			<input type="password" name="Passwort"/>
 			<br>
 			
-			<label>Name:</label>
+			<label>Name</label>
 			<input type="text" name="Name"/>
 			<br>
 			
-			<label>Vorname:</label>
+			<label>Vorname</label>
 			<input type="text" name="Vorname"/>
 			<br>
 			
-			<label>Position:</label>
+			<label>Position</label>
 			<select name="Position">
-				<option value="1">Geschäftsführung</option>
-				<option value="2">Lieferant</option>
-				<option value="3">Verkäufer</option>
+				<option value="Geschaeftsfuehrung">Geschäftsführung</option>
+				<option value="Lieferant">Lieferant</option>
+				<option value="Verkaeufer">Verkäufer</option>
+			</select>
+			<br>
+			
+			<label>Standort</label>
+			<select name="StandortNr">
+				<option value="1">Kempten Hauptsitz</option>
+				<option value="2">Kempten 2</option>
+				<option value="3">KF</option>
 			</select>
 			<br><br>
 			

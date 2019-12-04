@@ -14,10 +14,10 @@ if(!istEingeloggt())
 	die();
 }
 
-if(istEingeloggt() && ($_SESSION['position'] != 1))
+if(istEingeloggt() && ($_SESSION['position'] == "Lieferant"))
 {
 	echo('<main>');
-	echo('<p>Zugang untersagt. Nur für Geschäftsführer.</p>');
+	echo('<p>Zugang untersagt. Nur für Geschäftsführer und Verkäufer.</p>');
 	echo('<p><a href="/index.php">Zur Startseite</a></p>');
 	echo('</main>');
 	require("php/footer.php");

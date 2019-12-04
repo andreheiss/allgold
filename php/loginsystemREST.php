@@ -14,7 +14,7 @@ switch ($method)
 	case 'POST':
 		if(isset($_POST['register']))
 		{
-			if(empty($_POST['Benutzername']) || empty($_POST['Passwort']) || empty($_POST['Name']) || empty($_POST['Vorname']) || empty($_POST['Position']))
+			if(empty($_POST['Benutzername']) || empty($_POST['Passwort']) || empty($_POST['Name']) || empty($_POST['Vorname']) || empty($_POST['Position']) || empty($_POST['StandortNr']))
 			{
 				echo('<main>');
 				echo('<p>Bitte alle Felder ausfüllen.</p>');

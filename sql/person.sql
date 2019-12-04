@@ -9,16 +9,17 @@ CREATE TABLE `person` (
   `Vorname` varchar(50) NOT NULL,
   `Benutzername` varchar(20) NOT NULL,
   `Passwort` longtext NOT NULL,
-  `Position` varchar(20) NOT NULL
+  `Position` varchar(50) NOT NULL,
+  `StandortNr` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Daten für Tabelle `person`
 --
-INSERT INTO `person` (`PersNr`, `Name`, `Vorname`, `Benutzername`, `Passwort`, `Position`) VALUES
-(1, 'Meier', 'Peter', 'meipe', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', 'Geschaeftsfuerung'),
-(2, 'Schmidt', 'Herbert', 'schhe', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', 'Lieferant'),
-(3, 'Maler', 'Ignaz', 'malig', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', 'Verkaeufer');
+INSERT INTO `person` (`PersNr`, `Name`, `Vorname`, `Benutzername`, `Passwort`, `Position`, `StandortNr`) VALUES
+(1, 'Meier', 'Peter', 'gf1', '202cb962ac59075b964b07152d234b70', 'Geschaeftsfuehrung', 1),
+(2, 'Schmidt', 'Herbert', 'lf1', '202cb962ac59075b964b07152d234b70', 'Lieferant', 1),
+(3, 'Maler', 'Ignaz', 'vk1', '202cb962ac59075b964b07152d234b70', 'Verkaeufer', 3);
 
 --
 -- Indizes für die Tabelle `person`

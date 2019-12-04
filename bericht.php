@@ -14,7 +14,7 @@ if(!istEingeloggt())
 	die();
 }
 
-if(istEingeloggt() && ($_SESSION['position'] != 1))
+if(istEingeloggt() && ($_SESSION['position'] != "Geschaeftsfuehrung"))
 {
 	echo('<main>');
 	echo('<p>Zugang untersagt. Nur für Geschäftsführer.</p>');

@@ -14,7 +14,7 @@ if(!istEingeloggt())
 	die();
 }
 
-if(istEingeloggt() && ($_SESSION['position'] > 2))
+if(istEingeloggt() && ($_SESSION['position'] == "Verkaeufer"))
 {
 	echo('<main>');
 	echo('<p>Zugang untersagt. Nur für Lieferanten und Geschäftsführer.</p>');

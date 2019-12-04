@@ -44,33 +44,8 @@ if(istEingeloggt() && ($_SESSION['position'] == 2))
 		<fieldset id="fieldset_verkauf">
 			<form action="php/salesREST.php" method="POST">
 			<input type="hidden" name="action" value="POST">
-			
-			<label>Standort:</label>
-			<select name="StandortNr">
-				<option value="1">Kempten Firmensitz (B)</option>
-				<option value="2">Kempten Außenstelle (V)</option>
-				<option value="3">Kaufbeuren Außenstelle (V)</option>
-				<option value="4">Memmingen Außenstelle (B)</option>
-				<option value="5">Isny Außenstelle (A)</option>
-				<option value="6">Marktoberdorf Außenstelle (A)</option>
-				<option value="7">Sonthofen Außenstelle (V)</option>
-				<option value="8">Oberstdorf Außenstelle (A)</option>
-				<option value="9">Oberstaufen Außenstelle (A)</option>
-				<option value="10">Immenstadt Außenstelle (A)</option>
-				<option value="11">Füssen Außenstelle (B)</option>
-				<option value="12">Lindau Außenstelle (B)</option>
-			</select>
-			<br>
-			
-			<label>Person:</label>
-			<select name="PersNr">
-				<option value="1">Geschäftsführung</option>
-				<option value="2">Lieferant</option>
-				<option value="3">Verkäufer</option>
-			</select>
-			<br>
 
-			<label>Artikel:</label>
+			<label>Artikel</label>
 			<select name="ArtikelNr">
 				<option value="1">Milch</option>
 				<option value="2">Emmentaler</option>
@@ -81,20 +56,28 @@ if(istEingeloggt() && ($_SESSION['position'] == 2))
 				<option value="7">Streichkäse</option>
 				<option value="8">Bergkäse</option>
 			</select>
+			
 			<br>
 			
-			<label>Anzahl:</label>
+			<label>Stückzahl</label>
 			<input type="number" id="Anzahl" name="Anzahl" placeholder="0"/>
-			<br>
 			
-			<label>Preis:</label>
-			<input type="text" id="Preis" name="Preis">
+			<br>
+				
+			<label>Preis in €</label>
+			<?php
+				$db_res = runSQL("SELECT Preis FROM `artikel` WHERE ArtikelNr=1");
+				while($row = mysqli_fetch_array($db_res))
+				{
+					echo("<input type='text' id='Preis' name='Preis' disabled='disabled' value='".$row['Preis']."' readonly>");
+				}
+			?>
 			<br><br>
 			
-			<button type="button" name="Gesamtpreis" id="salebuttons">Gesamtpreis</button>
+			<button type="button" name="Gesamtpreis" id="salebuttons">Gesamtpreis anzeigen</button>
 			
 			<output style="float:right"></output>
-			<script type="text/javascript" src="js/gesamtpreis.js"></script>
+			<script type="text/javascript" src="js/sales.js"></script>
 			<br><br>
 			
 			<button type="submit" name="sale" id="salebuttons">Verkauf erfassen</button>

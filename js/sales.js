@@ -2,8 +2,8 @@ document.querySelector("#salebuttons").addEventListener('click', berechne_gesamt
 
 function berechne_gesamtpreis()
 {
-	var Anzahl = parseInt(document.getElementById("Anzahl").value),
-		Preis = parseInt(document.getElementById("Preis").value),
+	var Anzahl = document.getElementById("Anzahl").value,
+		Preis = document.getElementById("Preis").value,
 		gp = Anzahl*Preis;
 		
 	document.querySelector("output").textContent = gp;
