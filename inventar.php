@@ -50,8 +50,6 @@ if(istEingeloggt() && ($_SESSION['position'] == "Verkaeufer"))
 			echo('<th>ArtikelNr</th>');
 			echo('<th>StueckzahlIST</th>');
 			echo('<th>StueckzahlSOLL</th>');
-			echo('<th>StueckzahlMAX</th>');
-			echo('<th>Fehlbestand</th>');
 			echo('</tr>');
 			
 			while($row = mysqli_fetch_array($db_res))
@@ -62,8 +60,6 @@ if(istEingeloggt() && ($_SESSION['position'] == "Verkaeufer"))
 				echo('<td>' . $row['ArtikelNr'] . '</td>');
 				echo('<td>' . $row['StueckzahlIST'] . '</td>');
 				echo('<td>' . $row['StueckzahlSOLL'] . '</td>');
-				echo('<td>' . $row['StueckzahlMAX'] . '</td>');
-				echo('<td>' . $row['Fehlbestand'] . '</td>');
 				echo('</tr>');
 			}
 			

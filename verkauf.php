@@ -46,13 +46,13 @@ if(istEingeloggt() && ($_SESSION['position'] == "Lieferant"))
 
 			<label>Artikel</label>
 			<?php
-			$db_res = runSQL("SELECT * FROM `artikel`");
-			echo "<select name='ArtikelNr'>";
-			while($row = mysqli_fetch_array($db_res))
-			{
-				echo "<option value='" . $row['ArtikelNr'] . "'>" .$row['Name']. " (".$row['Beschreibung']. ")"."</option>";
-			}	
-			echo "</select>";
+				$db_res = runSQL("SELECT * FROM `artikel`");
+				echo "<select name='ArtikelNr'>";
+				while($row = mysqli_fetch_array($db_res))
+				{
+					echo("<option value='" . $row['ArtikelNr'] . "'>" .$row['Name']. " (".$row['Beschreibung']. ")"."</option>");
+				}	
+				echo "</select>";	
 			?>
 			
 			<br>
@@ -70,15 +70,18 @@ if(istEingeloggt() && ($_SESSION['position'] == "Lieferant"))
 					echo("<input type='text' id='Preis' name='Preis' disabled='disabled' value='".$row['Preis']."' readonly>");
 				}
 			?>
+			
 			<br><br>
 			
 			<button type="button" name="Gesamtpreis" id="salebuttons">Gesamtpreis anzeigen</button>
 			
 			<output style="float:right"></output>
 			<script type="text/javascript" src="js/sales.js"></script>
+			
 			<br><br>
 			
 			<button type="submit" name="sale" id="salebuttons">Verkauf erfassen</button>
+			
 			<br>
 			
 			</form>

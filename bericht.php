@@ -74,22 +74,22 @@ if(istEingeloggt() && ($_SESSION['position'] != "Geschaeftsfuehrung"))
 			echo('<table id = "bericht_tabellen">');
 			echo('<tr>');
 			echo('<th>BefuellungNr</th>');
-			echo('<th>PersNr</th>');
 			echo('<th>StandortNr</th>');
+			echo('<th>PersNr</th>');
 			echo('<th>ArtikelNr</th>');
 			echo('<th>Anzahl</th>');
-			echo('<th>Datum</th>');
+			echo('<th>Zeitpunkt</th>');
 			echo('</tr>');
 			
 			while($row = mysqli_fetch_array($db_res))
 			{
 				echo('<tr>');
 				echo('<td>' . $row['BefuellungNr'] . '</td>');
-				echo('<td>' . $row['PersNr'] . '</td>');
 				echo('<td>' . $row['StandortNr'] . '</td>');
+				echo('<td>' . $row['PersNr'] . '</td>');
 				echo('<td>' . $row['ArtikelNr'] . '</td>');
 				echo('<td>' . $row['Anzahl'] . '</td>');
-				echo('<td>' . $row['Datum'] . '</td>');
+				echo('<td>' . $row['Zeitpunkt'] . '</td>');
 				echo('</tr>');
 			}
 			
@@ -106,8 +106,6 @@ if(istEingeloggt() && ($_SESSION['position'] != "Geschaeftsfuehrung"))
 			echo('<th>ArtikelNr</th>');
 			echo('<th>StueckzahlIST</th>');
 			echo('<th>StueckzahlSOLL</th>');
-			echo('<th>StueckzahlMAX</th>');
-			echo('<th>Fehlbestand</th>');
 			echo('</tr>');
 			
 			while($row = mysqli_fetch_array($db_res))
@@ -118,8 +116,6 @@ if(istEingeloggt() && ($_SESSION['position'] != "Geschaeftsfuehrung"))
 				echo('<td>' . $row['ArtikelNr'] . '</td>');
 				echo('<td>' . $row['StueckzahlIST'] . '</td>');
 				echo('<td>' . $row['StueckzahlSOLL'] . '</td>');
-				echo('<td>' . $row['StueckzahlMAX'] . '</td>');
-				echo('<td>' . $row['Fehlbestand'] . '</td>');
 				echo('</tr>');
 			}
 			
@@ -137,6 +133,7 @@ if(istEingeloggt() && ($_SESSION['position'] != "Geschaeftsfuehrung"))
 			echo('<th>Benutzername</th>');
 			echo('<th>Passwort</th>');
 			echo('<th>Position</th>');
+			echo('<th>StandortNr</th>');
 			echo('</tr>');
 			
 			while($row = mysqli_fetch_array($db_res))
@@ -148,6 +145,7 @@ if(istEingeloggt() && ($_SESSION['position'] != "Geschaeftsfuehrung"))
 				echo('<td>' . $row['Benutzername'] . '</td>');
 				echo('<td>' . $row['Passwort'] . '</td>');
 				echo('<td>' . $row['Position'] . '</td>');
+				echo('<td>' . $row['StandortNr'] . '</td>');
 				echo('</tr>');
 			}
 			
@@ -192,7 +190,7 @@ if(istEingeloggt() && ($_SESSION['position'] != "Geschaeftsfuehrung"))
 			echo('<th>PersNr</th>');
 			echo('<th>ArtikelNr</th>');
 			echo('<th>Anzahl</th>');
-			echo('<th>Datum</th>');
+			echo('<th>Zeitpunkt</th>');
 			echo('</tr>');
 			
 			while($row = mysqli_fetch_array($db_res))
@@ -203,7 +201,7 @@ if(istEingeloggt() && ($_SESSION['position'] != "Geschaeftsfuehrung"))
 				echo('<td>' . $row['PersNr'] . '</td>');
 				echo('<td>' . $row['ArtikelNr'] . '</td>');
 				echo('<td>' . $row['Anzahl'] . '</td>');
-				echo('<td>' . $row['Datum'] . '</td>');
+				echo('<td>' . $row['Zeitpunkt'] . '</td>');
 				echo('</tr>');
 			}
 			
