@@ -6,9 +6,8 @@ require("php/header.php");
 if(!istEingeloggt())
 {
 	echo('<main>');
-	echo('<p>Du musst dich zuvor einloggen.</p>');
-	echo('<p><a href="/login.php">Zum Login</a></p>');
-	echo('<p><a href="/index.php">Zur Startseite</a></p>');
+	echo('<p>Du musst dich zuvor einloggen. Weiterleiten...</p>');
+	header("Refresh: 3; URL=http://localhost/login.php");
 	echo('</main>');
 	require("php/footer.php");
 	die();
@@ -18,7 +17,7 @@ if(istEingeloggt() && ($_SESSION['position'] != "Geschaeftsfuehrung"))
 {
 	echo('<main>');
 	echo('<p>Zugang untersagt. Nur für Geschäftsführer.</p>');
-	echo('<p><a href="/index.php">Zur Startseite</a></p>');
+	header("Refresh: 3; URL=http://localhost/index.php");
 	echo('</main>');
 	require("php/footer.php");
 	die();

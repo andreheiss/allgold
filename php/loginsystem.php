@@ -27,7 +27,7 @@ function register($data)
 	
 	if($row['COUNT(*)'] > 0)
 	{
-		return 'Der eingegebene Benutzername ist schon vergeben.';
+		return 'Der eingegebene Benutzername ist schon vergeben. Weiterleiten...';
 	}
 	
 	$stmt = "INSERT INTO `person` (
@@ -50,7 +50,7 @@ function register($data)
 
 	if($result == 1)
 	{
-		return "Benutzer erfolgreich registriert.";
+		return "Benutzer erfolgreich registriert. Weiterleiten...";
 	}
 	return "FEHLER | ".$result;
 }
@@ -65,15 +65,16 @@ function login($data)
 	
 	if(mysqli_num_rows($db_res) == 0)
 	{
-		return 'Benutzername oder Passwort falsch.';
+		return 'Benutzername oder Passwort falsch. Weiterleiten...';
 	}
 	
 	$row = mysqli_fetch_array($db_res);
 	$_SESSION['eingeloggt'] = 1;
+	$_SESSION['person'] = $row['PersNr'];
 	$_SESSION['position'] = $row['Position'];
 	$_SESSION['standort'] = $row['StandortNr'];
 	
-	return 'Erfolgreich eingeloggt.';
+	return 'Erfolgreich eingeloggt. Weiterleiten...';
 }
 
 ?>

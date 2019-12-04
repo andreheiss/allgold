@@ -6,21 +6,20 @@ include("php/header.php");
 if(!istEingeloggt())
 {
 	echo('<main>');
-	echo('<p>Du musst dich zuvor einloggen.</p>');
-	echo('<p><a href="/login.php">Zum Login</a></p>');
-	echo('<p><a href="/index.php">Zur Startseite</a></p>');
+	echo('<p>Du musst dich zuvor einloggen. Weiterleiten...</p>');
+	header("Refresh: 3; URL=http://localhost/login.php");
 	echo('</main>');
 	require("php/footer.php");
 	die();
 }
 
-if(istEingeloggt() && ($_SESSION['position'] == 2))
+if(istEingeloggt() && ($_SESSION['position'] == "Lieferant"))
 {
 	echo('<main>');
-	echo('<p>Zugang untersagt. Nur für Verkäufer und Geschäftsführer.</p>');
+	echo('<p>Zugang untersagt. Nur für Verkäufer und Geschäftsführer. Weiterleiten...</p>');
 	echo('<p><a href="/index.php">Zur Startseite</a></p>');
 	echo('</main>');
-	require("php/footer.php");
+	require("php/footer.php"); 
 	die();
 }
 
@@ -46,16 +45,15 @@ if(istEingeloggt() && ($_SESSION['position'] == 2))
 			<input type="hidden" name="action" value="POST">
 
 			<label>Artikel</label>
-			<select name="ArtikelNr">
-				<option value="1">Milch</option>
-				<option value="2">Emmentaler</option>
-				<option value="3">Gauda</option>
-				<option value="4">Joghurt 100g</option>
-				<option value="5">Quark</option>
-				<option value="6">Joghurt 500g</option>
-				<option value="7">Streichkäse</option>
-				<option value="8">Bergkäse</option>
-			</select>
+			<?php
+			$db_res = runSQL("SELECT * FROM `artikel`");
+			echo "<select name='ArtikelNr'>";
+			while($row = mysqli_fetch_array($db_res))
+			{
+				echo "<option value='" . $row['ArtikelNr'] . "'>" .$row['Name']. " (".$row['Beschreibung']. ")"."</option>";
+			}	
+			echo "</select>";
+			?>
 			
 			<br>
 			

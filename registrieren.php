@@ -6,8 +6,8 @@ require("php/header.php");
 if(istEingeloggt())
 {
 	echo('<main>');
-	echo('<p>Du bist bereits eingeloggt.</p>');
-	echo('<p><a href="/index.php">Zurück zur Startseite</a></p>');
+	echo('<p>Du bist bereits eingeloggt. Weiterleiten...</p>');
+	header("Refresh: 3; URL=http://localhost/index.php");
 	echo('</main>');
 	require("php/footer.php");
 	die();
@@ -56,15 +56,20 @@ if(istEingeloggt())
 				<option value="Geschaeftsfuehrung">Geschäftsführung</option>
 				<option value="Lieferant">Lieferant</option>
 				<option value="Verkaeufer">Verkäufer</option>
+				<option value="Automat">Automat</option>
 			</select>
 			<br>
 			
 			<label>Standort</label>
-			<select name="StandortNr">
-				<option value="1">Kempten Hauptsitz</option>
-				<option value="2">Kempten 2</option>
-				<option value="3">KF</option>
-			</select>
+			<?php
+			$db_res = runSQL("SELECT * FROM `standort` WHERE Typ = 'A'");
+			echo "<select name='StandortNr'>";
+			while($row = mysqli_fetch_array($db_res))
+			{
+				echo "<option value='" . $row['StandortNr'] . "'>" .$row['Ort']. "</option>";
+			}	
+			echo "</select>";
+			?>
 			<br><br>
 			
 			<div id="buttons">

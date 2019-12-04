@@ -7,13 +7,13 @@ echo('<main>');
 if(istEingeloggt())
 {
 	$_SESSION['eingeloggt'] = '';
-	echo('<p>Du hast dich erfolgreich ausgeloggt.</p>');
-	echo('<p><a href="/index.php">Zurück zur Startseite</a></p>');
+	echo('<p>Du hast dich erfolgreich ausgeloggt. Weiterleiten...</p>');
+	header("Refresh: 3; URL=http://localhost/index.php");
 }
 else
 {
-	echo('<p>Du musst dich zuvor einloggen.</p>');
-	echo('<p><a href="/index.php">Zurück zur Startseite</a></p>');
+	echo('<p>Du musst dich zuvor einloggen. Weiterleiten...</p>');
+	header("Refresh: 3; URL=http://localhost/login.php");
 }
 echo('</main>');
 require("php/footer.php");

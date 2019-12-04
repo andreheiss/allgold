@@ -5,6 +5,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 --
 CREATE TABLE `verkauf`(
 	`VerkaufNr` int(11) NOT NULL,
+	`StandortNr` int(11) NOT NULL,
 	`PersNr` int(11) NOT NULL,
 	`ArtikelNr` int(11) NOT NULL,
 	`Anzahl` int(11) NOT NULL,

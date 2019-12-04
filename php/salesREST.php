@@ -4,7 +4,6 @@ include('sales.php');
 
 $data = array_merge($_GET, $_POST);
 $method = $data['action'];
-$home = '<br><br><a href="/index.php">Zurück zur Startseite</a>';
 
 switch ($method)
 {
@@ -13,7 +12,8 @@ switch ($method)
 
 	case 'POST':
 		$sql = addSale($data);
-		echo "".$sql.$home;
+		echo("" .$sql);
+		header("Refresh: 3; URL=http://localhost/verkauf.php");
 	break;
 
 	case 'PUT':

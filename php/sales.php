@@ -1,6 +1,6 @@
 <?php
 
-include('datenbank.php');
+include('loginSystem.php');
 
 function addSale($data)
 {
@@ -10,19 +10,19 @@ function addSale($data)
 	ArtikelNr,
 	Anzahl
 	) VALUES (
-	'".$data['StandortNr']."',
-	'".$data['PersNr']."',
+	'".$_SESSION['standort']."',
+	'".$_SESSION['person']."',
 	'".$data['ArtikelNr']."',
 	'".$data['Anzahl']."'
 	);";
 
 	$result = runSQL($stmt);
 
-	if($result == 1)
+	if(!$result)
 	{
-		return "Verkauf erfolgreich erfasst.";
+		return "FEHLER | ".$result;
 	}
-	return "FEHLER | ".$result;
+	return "Verkauf erfolgreich erfasst. Weiterleiten...";
 }
 
 ?>

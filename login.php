@@ -6,8 +6,8 @@ require("php/header.php");
 if(istEingeloggt())
 {
 	echo('<main>');
-	echo('<p>Du bist bereits eingeloggt.</p>');
-	echo('<p><a href="/index.php">Zurück zur Startseite</a></p>');
+	echo('<p>Du bist bereits eingeloggt. Weiterleiten...</p>');
+	header("Refresh: 3; URL=http://localhost/index.php");
 	echo('</main>');
 	require("php/footer.php");
 	die();
