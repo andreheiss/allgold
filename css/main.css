@@ -44,12 +44,12 @@ nav li
 	float: left;
 }
 
-nav a
+nav li a
 {
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 1em 2em;
+	padding: 14px 16px;
 	text-decoration: none;
 }
 
@@ -162,7 +162,7 @@ fieldset
 	text-align: left;
 }
 
-input[type=text], input[type=number], select
+input[type=text], input[type=number], input[type=password], select
 {
   width: 100%;
   padding: 12px 20px;
@@ -173,7 +173,12 @@ input[type=text], input[type=number], select
   box-sizing: border-box;
 }
 
-button[type=submit]
+#Preis, #Gesamtpreis 
+{
+	-moz-appearance: textfield;
+}
+
+input[type=submit]
 {
   width: 100%;
   background-color: #4CAF50;
@@ -185,7 +190,7 @@ button[type=submit]
   cursor: pointer;
 }
 
-button[type=submit]:hover
+input[type=submit]:hover
 {
   background-color: #45a049;
 }

@@ -51,12 +51,12 @@ if(istEingeloggt() && ($_SESSION['position'] == "Lieferant"))
 			<input type="number" id="Anzahl" name="Anzahl" placeholder="0">
 				
 			<label>Stückpreis [in €]</label>
-			<input type="text" id="Preis" name="Preis" disabled readonly>
+			<input type="number" id="Preis" name="Preis" disabled readonly>
 			
 			<label>Gesamtpreis [in €]</label>
-			<input type="text" id="Gesamtpreis" name="Gesamtpreis" disabled readonly>
+			<input type="number" id="Gesamtpreis" name="Gesamtpreis" disabled readonly>
 			
-			<button type="submit" name="sale">Verkauf erfassen</button>
+			<input type="submit" name="sale" value="Verkauf erfassen">
 			
 			<script type="text/javascript" src="js/sales.js"></script>
 			
