@@ -1,7 +1,7 @@
 <?php
 
-require("php/loginSystem.php");
-include("php/header.php");
+include("php/loginSystem.php");
+require("php/header.php");
 
 if(!istEingeloggt())
 {
@@ -32,7 +32,7 @@ if(istEingeloggt() && ($_SESSION['position'] == "Lieferant"))
 		<li><a href="inventar.php">Inventarverwaltung</a></li>
 		<li><a href="bericht.php">Berichtswesen (Reporting)</a></li>
 		<li><a href="liste.php">Preislisten- und Katalogerstellung</a></li>
-		<li style="float:right"><a href="logout.php">Ausloggen</a></li>');
+		<li style="float:right"><a href="logout.php">Ausloggen</a></li>
 	</ul>
 </nav>
 
@@ -45,44 +45,20 @@ if(istEingeloggt() && ($_SESSION['position'] == "Lieferant"))
 			<input type="hidden" name="action" value="POST">
 
 			<label>Artikel</label>
-			<?php
-				$db_res = runSQL("SELECT * FROM `artikel`");
-				echo "<select name='ArtikelNr'>";
-				while($row = mysqli_fetch_array($db_res))
-				{
-					echo("<option value='" . $row['ArtikelNr'] . "'>" .$row['Name']. " (".$row['Beschreibung']. ")"."</option>");
-				}	
-				echo "</select>";	
-			?>
-			
-			<br>
+			<?php require("php/artikelnummer.php"); ?>
 			
 			<label>Stückzahl</label>
-			<input type="number" id="Anzahl" name="Anzahl" placeholder="0"/>
-			
-			<br>
+			<input type="number" id="Anzahl" name="Anzahl" placeholder="0">
 				
-			<label>Preis in €</label>
-			<?php
-				$db_res = runSQL("SELECT Preis FROM `artikel` WHERE ArtikelNr=1");
-				while($row = mysqli_fetch_array($db_res))
-				{
-					echo("<input type='text' id='Preis' name='Preis' disabled='disabled' value='".$row['Preis']."' readonly>");
-				}
-			?>
+			<label>Stückpreis [in €]</label>
+			<input type="text" id="Preis" name="Preis" disabled readonly>
 			
-			<br><br>
+			<label>Gesamtpreis [in €]</label>
+			<input type="text" id="Gesamtpreis" name="Gesamtpreis" disabled readonly>
 			
-			<button type="button" name="Gesamtpreis" id="salebuttons">Gesamtpreis anzeigen</button>
+			<button type="submit" name="sale">Verkauf erfassen</button>
 			
-			<output style="float:right"></output>
 			<script type="text/javascript" src="js/sales.js"></script>
-			
-			<br><br>
-			
-			<button type="submit" name="sale" id="salebuttons">Verkauf erfassen</button>
-			
-			<br>
 			
 			</form>
 		</fieldset>

@@ -1,10 +1,24 @@
-document.querySelector("#salebuttons").addEventListener('click', berechne_gesamtpreis);
+document.getElementById("ArtikelNr").addEventListener('change', artikelpreis);
+document.getElementById("Anzahl").addEventListener('change', gesamtpreis);
 
-function berechne_gesamtpreis()
+function artikelpreis()
+{	
+	var id = document.getElementById("ArtikelNr").value;
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function()
+	{
+		document.getElementById("Preis").value = this.responseText;
+	};
+	xhttp.open("GET", "php/artikelpreis.php?id="+id, true);
+	xhttp.send();
+}
+
+function gesamtpreis()
 {
 	var Anzahl = document.getElementById("Anzahl").value,
 		Preis = document.getElementById("Preis").value,
 		gp = Anzahl*Preis;
-		
-	document.querySelector("output").textContent = gp;
+	
+	document.getElementById("Gesamtpreis").value = gp;
 }
