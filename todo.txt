@@ -1,3 +1,0 @@
-Verkäufe registrieren (Inventar bei Verkauf anpassen)
-> Auswahl für Verkauf muss aus Inventar erfolgen
-

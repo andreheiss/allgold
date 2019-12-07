@@ -17,7 +17,7 @@ if(istEingeloggt() && ($_SESSION['position'] == "Lieferant"))
 {
 	echo('<main>');
 	echo('<p>Zugang untersagt. Nur für Verkäufer und Geschäftsführer. Weiterleiten...</p>');
-	echo('<p><a href="/index.php">Zur Startseite</a></p>');
+	header("Refresh: 3; URL=http://localhost/index.php");
 	echo('</main>');
 	require("php/footer.php"); 
 	die();

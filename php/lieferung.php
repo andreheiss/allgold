@@ -2,7 +2,7 @@
 
 include('loginSystem.php');
 
-function addSale($data)
+function refill($data)
 {
 	$vk = "INSERT INTO `verkauf` (
 	StandortNr,
@@ -32,7 +32,7 @@ function addSale($data)
 		return "FEHLER | " .$res_vk;
 	}
 	
-	return "Verkauf erfolgreich erfasst. Weiterleiten...";
+	return "Lieferung erfolgreich erfasst. Weiterleiten...";
 }
 
 ?>

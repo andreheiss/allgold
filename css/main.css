@@ -144,6 +144,16 @@ fieldset
 	display: inline-block;
 }
 
+#fieldset_inventar
+{
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: 35%;
+	margin-right: 35%;
+	text-align: left;
+	display: inline-block;
+}
+
 #fieldset_login
 {
 	margin-top: 1%;

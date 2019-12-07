@@ -4,8 +4,7 @@ document.getElementById("Anzahl").addEventListener('change', gesamtpreis);
 function artikelpreis()
 {	
 	var id = document.getElementById("ArtikelNr").value;
-	var xhttp;
-	xhttp = new XMLHttpRequest();
+	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function()
 	{
 		document.getElementById("Preis").value = this.responseText;
