@@ -39,53 +39,19 @@ if(istEingeloggt() && ($_SESSION['position'] == "Verkaeufer"))
 <main>
 	<fieldset>
 	<legend>Inventar verwalten</legend>
-		
-		<p>Liste ausgeben</p>
-		<?php
-			$db_res = mysqli_query($db_link, "SELECT * FROM `inventar`") or die("Fehler: " . mysqli_error($db_link));
-			
-			echo('<table id="inventar_tabelle">');
-			echo('<tr>');
-			echo('<th>Standort</th>');
-			echo('<th>Artikel</th>');
-			echo('<th>Stückzahl</th>');
-			echo('</tr>');
-			
-			while($row = mysqli_fetch_array($db_res))
-			{
-				echo('<tr>');
-				echo('<td>' . $row['StandortNr'] . '</td>');
-				echo('<td>' . $row['ArtikelNr'] . '</td>');
-				echo('<td>' . $row['StueckzahlIST'] . '</td>');
-				echo('</tr>');
-			}
-			
-			echo('</table>');
-		?>
-		
-		<p>Lieferung erfassen</p>
+	
 		<fieldset id="fieldset_inventar">
 			<form action="php/lieferungREST.php" method="POST">
 			<input type="hidden" name="action" value="POST">
-
-			<label>Artikel</label>
-			<?php require("php/artikelnummer.php"); ?>
 			
-			<label>Stückzahl</label>
-			<input type="number" id="Anzahl" name="Anzahl" placeholder="0">
-				
-			<label>Stückpreis [in €]</label>
-			<input type="number" id="Preis" name="Preis" disabled readonly>
+			<?php require("php/standort.php"); ?>
 			
-			<label>Gesamtpreis [in €]</label>
-			<input type="number" id="Gesamtpreis" name="Gesamtpreis" disabled readonly>
-			
-			<input type="submit" name="sale" value="Lieferung erfassen">
-			
-			<script type="text/javascript" src="js/sales.js"></script>
+			<input type="submit" name="refill" value="Standort auffüllen">
 			
 			</form>
 		</fieldset>
+		
+		<?php require("php/inventartabelle.php"); ?>
 		
 	</fieldset>
 </main>

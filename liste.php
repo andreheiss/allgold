@@ -38,11 +38,8 @@ if(istEingeloggt() && ($_SESSION['position'] == "Lieferant"))
 
 <main>
 	<fieldset>
-	<legend>Allgold Supply Center</legend>
+	<legend>Liste drucken</legend>
 	
-		<br><br><br><br><br>
-		<p><a>Preislisten- und Katalogerstellung</a></p>
-		<br><br><br><br><br>
 		
 	</fieldset>
 </main>
