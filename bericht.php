@@ -40,7 +40,7 @@ if(istEingeloggt() && ($_SESSION['position'] != "Geschaeftsfuehrung"))
 	<fieldset>
 	<legend>Bericht anzeigen</legend>
 	
-		<object width="100%" height="1600" data="http://localhost:8080/Allgold_NetBeans/faces/cockpit/cockpit.xhtml"></object>
+		<object width="100%" height="1600" data="http://localhost:8080/Allgold/faces/cockpit/cockpit.xhtml"></object>
 		
 	</fieldset>
 </main>
