@@ -40,6 +40,19 @@ if(istEingeloggt() && ($_SESSION['position'] == "Lieferant"))
 	<fieldset>
 	<legend>Liste drucken</legend>
 	
+		<p>Preisliste erstellen<p>
+		<form class="form-inline" method="POST" action="Export/preisliste.bat">
+		<button type="submit" id="preisliste" class="btn btn-primary">Erstellen</button>
+		
+		<p>Preisliste öffnen<p>
+		Download
+		
+		<p>Katalog erstellen<p>
+		<form class="form-inline" method="POST" action="Export/katalog.bat">
+		<button type="submit" id="preisliste" class="btn btn-primary">Erstellen</button>
+		
+		<p>Katalog öffnen<p>
+		Download
 		
 	</fieldset>
 </main>
