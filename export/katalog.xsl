@@ -17,7 +17,7 @@
 	</fo:layout-master-set>
 	<fo:page-sequence master-reference="Katalog">
 		<fo:flow flow-name="xsl-region-body">
-			<fo:block background-image="header.png" content-width="165cm" content-height="65cm">
+			<fo:block background-image="../img/header.png" content-width="165cm" content-height="65cm">
 				<fo:block font-size="36px" space-before="4cm" space-after="4cm" text-align="center" margin-top="4cm" color="white">
 					Allgold Datenbank Katalog
 				</fo:block>

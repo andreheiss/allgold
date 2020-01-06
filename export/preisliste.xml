@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="datenbank">
+	<table_structure name="artikel">
+		<field Field="ArtikelNr" Type="int(11)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="Name" Type="varchar(30)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="Beschreibung" Type="varchar(150)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="Kategorie" Type="varchar(30)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="Preis" Type="decimal(16,2)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="artikel" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="ArtikelNr" Collation="A" Cardinality="20" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="artikel" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="20" Avg_row_length="819" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="21" Create_time="2019-12-04 15:32:32" Update_time="2020-01-06 14:28:37" Collation="latin1_swedish_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+	</table_structure>
+	<table_data name="artikel">
+	<row>
+		<field name="ArtikelNr">1</field>
+		<field name="Name">Allgaeuer Bergbutter</field>
+		<field name="Beschreibung">Sauerrahm</field>
+		<field name="Kategorie">Butter</field>
+		<field name="Preis">2.60</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">2</field>
+		<field name="Name">Allgaeuer Bergbutter</field>
+		<field name="Beschreibung">Sueßrahm</field>
+		<field name="Kategorie">Butter</field>
+		<field name="Preis">2.50</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">3</field>
+		<field name="Name">Allgaeuer Bergbutter</field>
+		<field name="Beschreibung">Heuaroma</field>
+		<field name="Kategorie">Butter</field>
+		<field name="Preis">2.40</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">4</field>
+		<field name="Name">Allgaeuer Bergbutter</field>
+		<field name="Beschreibung">Bergkraeuter</field>
+		<field name="Kategorie">Butter</field>
+		<field name="Preis">2.30</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">5</field>
+		<field name="Name">Allgaeuer Milch</field>
+		<field name="Beschreibung">Standard Milch</field>
+		<field name="Kategorie">Milch</field>
+		<field name="Preis">1.50</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">6</field>
+		<field name="Name">Fettarme Sahne</field>
+		<field name="Beschreibung">15% Sahne</field>
+		<field name="Kategorie">Sahne</field>
+		<field name="Preis">1.80</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">7</field>
+		<field name="Name">Molke 1.5</field>
+		<field name="Beschreibung">Molke mit 1.5% Fett</field>
+		<field name="Kategorie">Molke</field>
+		<field name="Preis">2.00</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">8</field>
+		<field name="Name">Schmand 20</field>
+		<field name="Beschreibung">Schmand mit 20% Fett</field>
+		<field name="Kategorie">Schmand</field>
+		<field name="Preis">1.20</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">9</field>
+		<field name="Name">Joghurt Edelweiß</field>
+		<field name="Beschreibung">3.5% Fett Joghurt</field>
+		<field name="Kategorie">Joghurt</field>
+		<field name="Preis">4.00</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">10</field>
+		<field name="Name">Joghurt Erdbeere</field>
+		<field name="Beschreibung">3.5% Fett Joghurt</field>
+		<field name="Kategorie">Joghurt</field>
+		<field name="Preis">4.20</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">11</field>
+		<field name="Name">Joghurt Heimische Beeren</field>
+		<field name="Beschreibung">3.5% Fett Joghurt</field>
+		<field name="Kategorie">Joghurt</field>
+		<field name="Preis">4.20</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">12</field>
+		<field name="Name">Joghurt Loewenzahn</field>
+		<field name="Beschreibung">3.5% Fett Joghurt</field>
+		<field name="Kategorie">Joghurt</field>
+		<field name="Preis">5.50</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">13</field>
+		<field name="Name">Joghurt Kirsche</field>
+		<field name="Beschreibung">3.5% Fett Joghurt</field>
+		<field name="Kategorie">Joghurt</field>
+		<field name="Preis">4.00</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">14</field>
+		<field name="Name">Joghurt Zwetschge</field>
+		<field name="Beschreibung">3.5% Fett Joghurt</field>
+		<field name="Kategorie">Joghurt</field>
+		<field name="Preis">4.10</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">15</field>
+		<field name="Name">Allgaeuer Bergkaese</field>
+		<field name="Beschreibung">2 Monate gereift</field>
+		<field name="Kategorie">Kaese</field>
+		<field name="Preis">2.50</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">16</field>
+		<field name="Name">Emmentaler</field>
+		<field name="Beschreibung">4 Monate gereift</field>
+		<field name="Kategorie">Kaese</field>
+		<field name="Preis">2.80</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">17</field>
+		<field name="Name">Kraeuterkaese</field>
+		<field name="Beschreibung">2 Wochen gereift</field>
+		<field name="Kategorie">Kaese</field>
+		<field name="Preis">3.20</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">18</field>
+		<field name="Name">Rosenkaese</field>
+		<field name="Beschreibung">1 Monat gereift</field>
+		<field name="Kategorie">Kaese</field>
+		<field name="Preis">2.90</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">19</field>
+		<field name="Name">Enziankaese</field>
+		<field name="Beschreibung">3 Wochen gereift</field>
+		<field name="Kategorie">Kaese</field>
+		<field name="Preis">2.50</field>
+	</row>
+	<row>
+		<field name="ArtikelNr">20</field>
+		<field name="Name">Frischkaese 20</field>
+		<field name="Beschreibung">Frischkaese mit 20% Fett</field>
+		<field name="Kategorie">Sonstiges</field>
+		<field name="Preis">2.00</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>
