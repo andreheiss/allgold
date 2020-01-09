@@ -8,7 +8,7 @@
 		<field Field="Kategorie" Type="varchar(30)" Null="NO" Key="" Extra="" Comment="" />
 		<field Field="Preis" Type="decimal(16,2)" Null="NO" Key="" Extra="" Comment="" />
 		<key Table="artikel" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="ArtikelNr" Collation="A" Cardinality="20" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<options Name="artikel" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="20" Avg_row_length="819" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="21" Create_time="2019-12-04 15:32:32" Update_time="2020-01-06 14:28:37" Collation="latin1_swedish_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+		<options Name="artikel" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="20" Avg_row_length="819" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="21" Create_time="2019-12-04 15:32:32" Collation="latin1_swedish_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
 	</table_structure>
 	<table_data name="artikel">
 	<row>
@@ -215,7 +215,7 @@
 		<field name="InventarNr">8</field>
 		<field name="StandortNr">1</field>
 		<field name="ArtikelNr">8</field>
-		<field name="StueckzahlIST">15</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">15</field>
 	</row>
 	<row>
@@ -446,63 +446,63 @@
 		<field name="InventarNr">41</field>
 		<field name="StandortNr">3</field>
 		<field name="ArtikelNr">1</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
 		<field name="InventarNr">42</field>
 		<field name="StandortNr">3</field>
 		<field name="ArtikelNr">2</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
 		<field name="InventarNr">43</field>
 		<field name="StandortNr">3</field>
 		<field name="ArtikelNr">3</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">15</field>
 		<field name="StueckzahlSOLL">15</field>
 	</row>
 	<row>
 		<field name="InventarNr">44</field>
 		<field name="StandortNr">3</field>
 		<field name="ArtikelNr">4</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
 		<field name="InventarNr">45</field>
 		<field name="StandortNr">3</field>
 		<field name="ArtikelNr">5</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">20</field>
 		<field name="StueckzahlSOLL">20</field>
 	</row>
 	<row>
 		<field name="InventarNr">46</field>
 		<field name="StandortNr">3</field>
 		<field name="ArtikelNr">6</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
 		<field name="InventarNr">47</field>
 		<field name="StandortNr">3</field>
 		<field name="ArtikelNr">7</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
 		<field name="InventarNr">48</field>
 		<field name="StandortNr">3</field>
 		<field name="ArtikelNr">8</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">15</field>
 		<field name="StueckzahlSOLL">15</field>
 	</row>
 	<row>
 		<field name="InventarNr">49</field>
 		<field name="StandortNr">3</field>
 		<field name="ArtikelNr">9</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
@@ -866,63 +866,63 @@
 		<field name="InventarNr">101</field>
 		<field name="StandortNr">6</field>
 		<field name="ArtikelNr">1</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
 		<field name="InventarNr">102</field>
 		<field name="StandortNr">6</field>
 		<field name="ArtikelNr">2</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
 		<field name="InventarNr">103</field>
 		<field name="StandortNr">6</field>
 		<field name="ArtikelNr">3</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">15</field>
 		<field name="StueckzahlSOLL">15</field>
 	</row>
 	<row>
 		<field name="InventarNr">104</field>
 		<field name="StandortNr">6</field>
 		<field name="ArtikelNr">4</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
 		<field name="InventarNr">105</field>
 		<field name="StandortNr">6</field>
 		<field name="ArtikelNr">5</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">20</field>
 		<field name="StueckzahlSOLL">20</field>
 	</row>
 	<row>
 		<field name="InventarNr">106</field>
 		<field name="StandortNr">6</field>
 		<field name="ArtikelNr">6</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
 		<field name="InventarNr">107</field>
 		<field name="StandortNr">6</field>
 		<field name="ArtikelNr">7</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
 		<field name="InventarNr">108</field>
 		<field name="StandortNr">6</field>
 		<field name="ArtikelNr">8</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">15</field>
 		<field name="StueckzahlSOLL">15</field>
 	</row>
 	<row>
 		<field name="InventarNr">109</field>
 		<field name="StandortNr">6</field>
 		<field name="ArtikelNr">9</field>
-		<field name="StueckzahlIST">5</field>
+		<field name="StueckzahlIST">10</field>
 		<field name="StueckzahlSOLL">10</field>
 	</row>
 	<row>
@@ -2034,7 +2034,7 @@
 		<field Field="Anzahl" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
 		<field Field="Zeitpunkt" Type="timestamp" Null="NO" Key="" Default="current_timestamp()" Extra="on update current_timestamp()" Comment="" />
 		<key Table="verkauf" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="VerkaufNr" Collation="A" Cardinality="8" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<options Name="verkauf" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="8" Avg_row_length="2048" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="9" Create_time="2019-12-04 15:33:36" Collation="latin1_swedish_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+		<options Name="verkauf" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="8" Avg_row_length="2048" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="10" Create_time="2019-12-04 15:33:36" Collation="latin1_swedish_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
 	</table_structure>
 	<table_data name="verkauf">
 	<row>
@@ -2100,6 +2100,14 @@
 		<field name="ArtikelNr">14</field>
 		<field name="Anzahl">1</field>
 		<field name="Zeitpunkt">2020-01-03 13:30:49</field>
+	</row>
+	<row>
+		<field name="VerkaufNr">9</field>
+		<field name="StandortNr">1</field>
+		<field name="PersNr">1</field>
+		<field name="ArtikelNr">8</field>
+		<field name="Anzahl">5</field>
+		<field name="Zeitpunkt">2020-01-07 11:47:35</field>
 	</row>
 	</table_data>
 </database>
