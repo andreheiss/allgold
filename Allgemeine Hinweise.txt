@@ -1,0 +1,53 @@
+Praktikum Internettechnologien
+
+bei Prof. Lenke im WS19/20
+
+von Andre Franz Heiß
+
+
+
+Programme:
+
+ApacheFriends XAMPP 7.3.10 (C:\XAMPP)
+NetBeans IDE 8.2 (C:\Program Files\NetBeans 8.2)
+Apache FOP 2.4 (C:\fop-2.4)
+Glassfish 4.1.1 (C:\glassfish4)
+Notepad++ (C:\Program Files\Notepad++)
+Mozilla Firefox (C:\Program Files\Mozilla Firefox)
+Es wurde das Betriebssystem Windows 10 Pro 64-bit verwendet.
+
+
+Umgebungsvariablen:
+
+Java (C:\Program Files\Java\jdk1.8.0_201\bin)
+Apache FOP (C:\fop-2.4\fop\)
+MySQL (C:\XAMPP\mysql\bin)
+
+
+- htdocs --> C:\XAMPP\htdocs
+- Allgold --> C:\Users\...\Documents\NetBeansProjects\Allgold
+
+- XAMPP-Module Apache und MySQL starten
+- NetBeans öffnen und Projekt Allgold starten
+- localhost im Browser aufrufen (http://localhost/index.php)
+
+
+
+Zugangsdaten für vorerstellte Accounts:
+
+Geschäftsführer (alle Rechte)
+Benutzername: gf1
+Passwort: 123
+
+
+Lieferant (nur Zugriff auf Inventarverwaltung)
+Benutzername: lf1
+Passwort: 123
+
+
+Verkäufer (nur Verkaufserfassung und Katalogerstellung)
+Benutzername: vk1
+Passwort: 123
+
+(Auch Registrierung neuer Benutzer möglich!)
+
